@@ -1,4 +1,13 @@
-var em = ["🟢","🔶","🟪","▲","➕","🌙","⭐","🇽","⬠","🛑"];
+var em = [
+    "images/triangle.png",
+    "images/circle.png",
+    "images/square.png",
+    "images/hexagon.png",
+    "images/pentagon.png",
+    "images/rhombus.png",
+    "images/star.png",
+    "images/half_moon.png"
+];
 
 //Shuffling above array
 var tmp, c, p = em.length;
@@ -42,7 +51,7 @@ window.onload = function() {
 //<button onclick="start(6, 6)">6 x 6</button>
 
 //Starting the game
-function start(r,l) {
+function start(r, l) {
 
     //Timer and moves
     min=0, sec=0, moves=0;
@@ -88,7 +97,7 @@ function start(r,l) {
                                     <div class='front'>
                                     </div>
                                 <div class='back'>
-                                    <p>${items[n-1]}</p>
+                                    <img src=${items[n-1]} />
                                     </div>
                                 </div>
                                </td>`);
@@ -104,7 +113,6 @@ function start(r,l) {
 function change(x) {
     //Variables
     let i = "#"+x+" .inner";
-    let f = "#"+x+" .inner .front";
     let b = "#"+x+" .inner .back";
   
     //Dont flip for these conditions
